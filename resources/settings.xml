@@ -148,7 +148,7 @@
                 </setting>
                 <setting id="enable-alaskanjellies" type="integer" label="32083" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -174,7 +174,7 @@
                 </setting>
                 <setting id="enable-atlanticoceantospainandfrance" type="integer" label="32085" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -200,7 +200,7 @@
                 </setting>
                 <setting id="enable-barracuda" type="integer" label="32087" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -226,7 +226,7 @@
                 </setting>
                 <setting id="enable-californiadolphins" type="integer" label="32089" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -265,7 +265,7 @@
                 </setting>
                 <setting id="enable-caribbeanday" type="integer" label="32092" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -278,7 +278,7 @@
                 </setting>
                 <setting id="enable-caribbean" type="integer" label="32093" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -304,7 +304,7 @@
                 </setting>
                 <setting id="enable-costaricadolphins" type="integer" label="32095" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -317,7 +317,7 @@
                 </setting>
                 <setting id="enable-cownoserays" type="integer" label="32096" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -356,7 +356,7 @@
                 </setting>
                 <setting id="enable-grayreefsharks" type="integer" label="32099" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -408,7 +408,7 @@
                 </setting>
                 <setting id="enable-humpbackwhale" type="integer" label="32103" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -473,7 +473,7 @@
                 </setting>
                 <setting id="enable-jacks" type="integer" label="32108" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -629,7 +629,7 @@
                 </setting>
                 <setting id="enable-palaujellies" type="integer" label="32120" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -707,7 +707,7 @@
                 </setting>
                 <setting id="enable-seastars" type="integer" label="32126" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
@@ -720,7 +720,7 @@
                 </setting>
                 <setting id="enable-seals" type="integer" label="32127" help="">
                     <level>0</level>
-                    <default>0</default>
+                    <default>1</default>
                     <constraints>
                         <options>
                             <option label="34001">0</option>
