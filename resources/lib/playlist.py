@@ -89,7 +89,7 @@ class AtvPlaylist:
                     systime = dt.datetime.strptime(systime, "%I:%M %p")
                     start_time = dt.datetime.strptime("6:00 AM", "%I:%M %p")
                     end_time = dt.datetime.strptime("6:00 PM", "%I:%M %p")
-                    day = True if (systime >= start_time and systime < end_time) else False
+                    day = True if (start_time <= systime < end_time) else False
                     xbmc.log(f"Currently {'day' if day else 'night'}time", level=xbmc.LOGDEBUG)
                     # always on
                     if current_location_state == 0:
