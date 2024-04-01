@@ -11,6 +11,7 @@ import os
 import tarfile
 from random import shuffle
 from urllib import request
+import datetime as dt
 
 import xbmc
 import xbmcvfs
@@ -84,7 +85,11 @@ class AtvPlaylist:
                     current_location_state = addon.getSettingInt("enable-" + location.lower().replace(" ", ""))
                     xbmc.log(f"Current location state is {current_location_state}", level=xbmc.LOGDEBUG)
                     # returns True if system time between start/end time, else False
-                    day = xbmc.getInfoLabel("System.Time(06:00,18:00)")
+                    systime = xbmc.getInfoLabel("System.Time(hh:mm xx)")
+                    systime = dt.datetime.strptime(systime, "%I:%M %p")
+                    start_time = dt.datetime.strptime("6:00 AM", "%I:%M %p")
+                    end_time = dt.datetime.strptime("6:00 PM", "%I:%M %p")
+                    day = True if (start_time <= systime < end_time) else False
                     xbmc.log(f"Currently {'day' if day else 'night'}time", level=xbmc.LOGDEBUG)
                     # always on
                     if current_location_state == 0:
