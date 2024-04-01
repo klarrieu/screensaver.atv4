@@ -26,7 +26,6 @@ apple_local_tar_path = os.path.join(addon_path, "resources.tar")
 # Local save location of the entries.json file containing video URLs
 local_entries_json_path = os.path.join(addon_path, "resources", "entries.json")
 
-
 # Fetch the TAR file containing the latest entries.json and overwrite the local copy
 def get_latest_entries_from_apple():
     xbmc.log("Downloading the Apple Aerials resources.tar to disk", level=xbmc.LOGDEBUG)
@@ -81,8 +80,25 @@ class AtvPlaylist:
                 # Retrieve the location name
                 location = block["accessibilityLabel"]
                 try:
-                    # Get the corresponding setting Bool by adding "enable-" + lowercase + no whitespace
-                    current_location_enabled = addon.getSettingBool("enable-" + location.lower().replace(" ", ""))
+                    # determine if current video is enabled (on, day, night, off)
+                    current_location_state = addon.getSettingInt("enable-" + location.lower().replace(" ", ""))
+                    xbmc.log(f"Current location state is {current_location_state}", level=xbmc.LOGDEBUG)
+                    # returns True if system time between start/end time, else False
+                    day = xbmc.getInfoLabel("System.Time(06:00,18:00)")
+                    xbmc.log(f"Currently {'day' if day else 'night'}time", level=xbmc.LOGDEBUG)
+                    # always on
+                    if current_location_state == 0:
+                        current_location_enabled = True
+                    # enabled for day and currently day
+                    elif current_location_state == 1 and day:
+                        current_location_enabled = True
+                    # enabled for night and currently night
+                    elif current_location_state == 2 and not day:
+                        current_location_enabled = True
+                    # disabled
+                    else:
+                        current_location_enabled = False
+
                 except TypeError:
                     xbmc.log("Location {} did not have a matching enable/disable setting".format(location),
                              level=xbmc.LOGDEBUG)
